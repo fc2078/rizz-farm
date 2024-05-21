@@ -1,0 +1,63 @@
+* {
+    font-family: Papyrus;
+    color: white;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    grid-template-rows: 0.3fr 1.3fr 1.4fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "sigma-rizz-farm sigma-rizz-farm sigma-rizz-farm"
+        "Clicker Upgrades Upgrades"
+        "Rizz-and-Stats Upgrades Upgrades";
+}
+
+.sigma-rizz-farm {
+    grid-area: sigma-rizz-farm;
+    background-color: #095256;
+    padding: 5px;
+    text-align: center;
+}
+
+.Clicker {
+    grid-area: Clicker;
+    background-color: #087F8C;
+    padding: 5px;
+}
+
+#clicker {
+    width: 300px;
+    margin: 3pt;
+}
+
+#clickme {
+    background-color: #16b15c;
+    border-radius: 30px;
+    padding-top: 5px;
+}
+
+#clickbutton {
+    background-color: #16b15c;
+    border-radius: 20px;
+    padding: 3px;
+}
+
+.Upgrades {
+    grid-area: Upgrades;
+    background-color: #5AAA95;
+}
+
+h2 {
+    text-align: center;
+}
+
+.Rizz-and-Stats {
+    grid-area: Rizz-and-Stats;
+    background-color: #86A873;
+    padding: 5px;
+}
+
+/* Palettes: https://coolors.co/095256-087f8c-5aaa95-86a873 */
