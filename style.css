@@ -1,5 +1,5 @@
 * {
-    font-family: Papyrus;
+    font-family: Segoe UI;
     color: white;
 }
 
@@ -26,28 +26,38 @@
     grid-area: Clicker;
     background-color: #087F8C;
     padding: 5px;
+    align-items: center;
 }
 
 #clicker {
-    width: 300px;
+    width: 250px;
     margin: 3pt;
 }
 
 #clickme {
     background-color: #16b15c;
     border-radius: 30px;
-    padding-top: 5px;
+    padding: 3px;
 }
 
 #clickbutton {
     background-color: #16b15c;
     border-radius: 20px;
     padding: 3px;
+    border: black;
 }
 
 .Upgrades {
     grid-area: Upgrades;
     background-color: #5AAA95;
+}
+
+#ug-items {
+    padding: 10px;
+}
+
+#ug-items li {
+    padding: 2px;
 }
 
 h2 {
