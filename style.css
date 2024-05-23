@@ -56,8 +56,13 @@
     padding: 10px;
 }
 
-#ug-items li {
-    padding: 2px;
+#ug-items button {
+    font-size: 15pt;
+    padding: 15px;
+    margin: 5px;
+    border-radius: 30px;
+    display: flex;
+    background-color: #095256;
 }
 
 h2 {
