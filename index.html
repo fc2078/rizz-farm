@@ -19,7 +19,7 @@
         </div>
         <div class="Clicker">
             <h2 id="clickme">↓ Click Me! ↓</h2>
-            <button id="clickbutton">
+            <button id="clickButton">
                 <img src="imgs/patrickBateman.jpeg" alt="Patrick Bateman sigma face." id="clicker">
             </button>
             <!-- pls fix img on home pc -->
@@ -27,11 +27,13 @@
         <div class="Upgrades">
             <h2>Upgrades</h2>
             <div id="ug-items">
-                <button>Rizz Boost (+5/click):</button>
-                <button>Autorizzer (+1/second):</button>
-                <button>Watermelon Cat:</button>
-                <button>Saul Goodman</button>
-                <button>Airbus A380</button>
+                <button class="upgrade-item" onclick="buyItem('rizzBoost')">Rizz Boost (+5/click): </button>
+                <button class="upgrade-item" onclick="buyItem('autorizzer')">Autorizzer (+1/second) :</button>
+                <button class="upgrade-item" onclick="buyItem('watermelonCat')">Watermelon Cat: </button>
+                <button class="upgrade-item" onclick="buyItem('saulGoodman')">Saul Goodman: </button>
+                <button class="upgrade-item" onclick="buyItem('babyGronk')">Baby Gronk: </button>
+                <button class="upgrade-item" onclick="buyItem('bugattiChiron')">Bugatti Chiron: </button>
+                <button class="upgrade-item" oncanplay="buyItem('airbusA380')">Airbus A380: </button>
             </div>
         </div>
         <div class="Rizz-and-Stats">

@@ -2,7 +2,7 @@ let rizzCounter = 0;
 let buyMultiplier = 1;
 const rizzCounterSpan = document.getElementById('rizz-counter');
 
-document.getElementById('clickerButton').addEventListener('click', () => {
+document.getElementById('clickButton').addEventListener('click', () => {
     rizzCounter++;
     rizzCounterSpan.textContent = rizzCounter;
     // Adding scaling effect
@@ -18,7 +18,9 @@ const upgrades = {
     autorizzer: { price: 100, count: 0, priceSpan: 'autorizzer-price', countSpan: 'autorizzer-count' },
     watermelonCat: { price: 1000, count: 0, priceSpan: 'watermelonCat-price', countSpan: 'watermelonCat-count' },
     saulGoodman: { price: 15000, count: 0, priceSpan: 'saulGoodman-price', countSpan: 'saulGoodman-count' },
-    airbusA380: { price: 100000, count: 0, priceSpan: 'airbusA380-price', countSpan: 'airbusA380-count' }
+    babyGronk: { price: 20000, count: 0, priceSpan: 'babyGronk-price', countSpan: 'babyGronk-count'},
+    bugattiChiron: { price: 4000000, count: 0, priceSpan: 'bugattiChiron-price', countSpan: 'bugattiChiron-count' },
+    airbusA380: { price: 7500000, count: 0, priceSpan: 'airbusA380-price', countSpan: 'airbusA380-count' }
 };
 
 function setMultiplier(multiplier) {

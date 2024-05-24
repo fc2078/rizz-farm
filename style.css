@@ -40,10 +40,11 @@
     padding: 3px;
 }
 
-#clickbutton {
+#clickButton {
     background-color: #16b15c;
     border-radius: 20px;
-    padding: 3px;
+    padding: 5px;
+    margin: 3px;
     border: black;
 }
 
@@ -56,7 +57,7 @@
     padding: 10px;
 }
 
-#ug-items button {
+button.upgrade-item {
     font-size: 15pt;
     padding: 15px;
     margin: 5px;
