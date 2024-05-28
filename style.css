@@ -27,6 +27,7 @@
     background-color: #087F8C;
     padding: 5px;
     align-items: center;
+    justify-content: center;
 }
 
 #clicker {
@@ -80,6 +81,18 @@ h2 {
 .upg-img {
     width: 75px;
     padding-right: 10px;
+    border-radius: 20px;
+}
+
+#moyai {
+    display: flex;
+    width: 75px;
+    padding: 10px;
+    align-items: center;
+}
+
+#rizz-div {
+    width: 40px;
 }
 
 /* Palettes: https://coolors.co/095256-087f8c-5aaa95-86a873 */

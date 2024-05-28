@@ -17,10 +17,11 @@ const upgrades = {
     rizzBoost: { price: 20, count: 0, priceSpan: 'rizzBoost-price', countSpan: 'rizzBoost-count' },
     autorizzer: { price: 100, count: 0, priceSpan: 'autorizzer-price', countSpan: 'autorizzer-count' },
     watermelonCat: { price: 1000, count: 0, priceSpan: 'watermelonCat-price', countSpan: 'watermelonCat-count' },
+    enhancedInstagram: { price: 5000, count: 0, priceSpan: 'enhancedInstagram-price', countSpan: 'enhancedInstagram-count' },
     saulGoodman: { price: 15000, count: 0, priceSpan: 'saulGoodman-price', countSpan: 'saulGoodman-count' },
     babyGronk: { price: 20000, count: 0, priceSpan: 'babyGronk-price', countSpan: 'babyGronk-count'},
     bugattiChiron: { price: 4000000, count: 0, priceSpan: 'bugattiChiron-price', countSpan: 'bugattiChiron-count' },
-    airbusA380: { price: 7500000, count: 0, priceSpan: 'airbusA380-price', countSpan: 'airbusA380-count' }
+    airbusA380: { price: 7500000, count: 0, priceSpan: 'airbusA380-price', countSpan: 'airbusA380-count' },
 };
 
 function setMultiplier(multiplier) {
@@ -61,8 +62,9 @@ function buyItem(upgrade) {
         upgrades[upgrade].count += quantity;
 
         document.getElementById(upgrades[upgrade].countSpan).innerText = `Bought: ${upgrades[upgrade].count}`;
+        
     } else {
-        alert(`Not enough rizz! You are very beta and broke. Achieve ${totalPrice} rizz to buy ${quantity} of ${upgrade}.`);
+        alert(`Not enough rizz! You are very beta and broke. Achieve ${totalPrice} rizz to buy the ${upgrade} upgrade so KEEP THE RIZZ UP AND STRIVE TO BECOME A SIGMA`);
     }
 }
 
