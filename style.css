@@ -64,6 +64,7 @@ button.upgrade-item {
     border-radius: 30px;
     display: flex;
     background-color: #095256;
+    align-items: center;
 }
 
 h2 {
@@ -74,6 +75,11 @@ h2 {
     grid-area: Rizz-and-Stats;
     background-color: #86A873;
     padding: 5px;
+}
+
+.upg-img {
+    width: 75px;
+    padding-right: 10px;
 }
 
 /* Palettes: https://coolors.co/095256-087f8c-5aaa95-86a873 */

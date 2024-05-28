@@ -22,22 +22,21 @@
             <button id="clickButton">
                 <img src="imgs/patrickBateman.jpeg" alt="Patrick Bateman sigma face." id="clicker">
             </button>
-            <!-- pls fix img on home pc -->
         </div>
         <div class="Upgrades">
             <h2>Upgrades</h2>
             <div id="ug-items">
-                <button class="upgrade-item" onclick="buyItem('rizzBoost')">Rizz Boost (+5/click): </button>
-                <button class="upgrade-item" onclick="buyItem('autorizzer')">Autorizzer (+1/second) :</button>
-                <button class="upgrade-item" onclick="buyItem('watermelonCat')">Watermelon Cat: </button>
-                <button class="upgrade-item" onclick="buyItem('saulGoodman')">Saul Goodman: </button>
-                <button class="upgrade-item" onclick="buyItem('babyGronk')">Baby Gronk: </button>
-                <button class="upgrade-item" onclick="buyItem('bugattiChiron')">Bugatti Chiron: </button>
-                <button class="upgrade-item" oncanplay="buyItem('airbusA380')">Airbus A380: </button>
+                <button class="upgrade-item" onclick="buyItem('rizzBoost')"><img src="imgs/greenUpArrow.png"  class="upg-img">Rizz Boost (+5/click): </button>
+                <button class="upgrade-item" onclick="buyItem('autorizzer')"><img src="imgs/autoRizzer.jpg" class="upg-img"> Autorizzer (+1/second) :</button>
+                <button class="upgrade-item" onclick="buyItem('watermelonCat')"><img src="imgs/watermelonCat.png"  class="upg-img"> Watermelon Cat: </button>
+                <button class="upgrade-item" onclick="buyItem('saulGoodman')"><img src="imgs/saulGoodman.jpg" class="upg-img"> Saul Goodman: </button>
+                <button class="upgrade-item" onclick="buyItem('babyGronk')"><img src="imgs/babyGronk.jpg" class="upg-img"> Baby Gronk: </button>
+                <button class="upgrade-item" onclick="buyItem('bugattiChiron')"><img src="imgs/bugattiChiron.jpg"  class="upg-img"> Bugatti Chiron: </button>
+                <button class="upgrade-item" oncanplay="buyItem('airbusA380')"><img src="imgs/airbusA380.webp"  class="upg-img"> Airbus A380: </button>
             </div>
         </div>
         <div class="Rizz-and-Stats">
-            <h2 id="rizzstat">Your Rizz: 0</h2>
+            <h2 id="rizzstat">Your Rizz: <span id="rizz-counter">0</span></h2>
             <h4>Stats and insights:
                 <ul id="stats">
                     <li>Highest rizz ever achieved: 0</li>

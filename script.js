@@ -1,6 +1,6 @@
 let rizzCounter = 0;
 let buyMultiplier = 1;
-const rizzCounterSpan = document.getElementById('rizz-counter');
+let rizzCounterSpan = document.getElementById('rizz-counter');
 
 document.getElementById('clickButton').addEventListener('click', () => {
     rizzCounter++;
