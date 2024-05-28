@@ -14,14 +14,14 @@ document.getElementById('clickButton').addEventListener('click', () => {
 
 // Code for upgrades
 const upgrades = {
-    rizzBoost: { price: 20, count: 0, priceSpan: 'rizzBoost-price', countSpan: 'rizzBoost-count' },
-    autorizzer: { price: 100, count: 0, priceSpan: 'autorizzer-price', countSpan: 'autorizzer-count' },
-    watermelonCat: { price: 1000, count: 0, priceSpan: 'watermelonCat-price', countSpan: 'watermelonCat-count' },
-    enhancedInstagram: { price: 5000, count: 0, priceSpan: 'enhancedInstagram-price', countSpan: 'enhancedInstagram-count' },
-    saulGoodman: { price: 15000, count: 0, priceSpan: 'saulGoodman-price', countSpan: 'saulGoodman-count' },
-    babyGronk: { price: 20000, count: 0, priceSpan: 'babyGronk-price', countSpan: 'babyGronk-count'},
-    bugattiChiron: { price: 4000000, count: 0, priceSpan: 'bugattiChiron-price', countSpan: 'bugattiChiron-count' },
-    airbusA380: { price: 7500000, count: 0, priceSpan: 'airbusA380-price', countSpan: 'airbusA380-count' },
+    rizzBoost: { price: 20, count: 0, priceSpan: 'rizzBoost-price', countSpan: 'rizzBoost-count', rate: 5 },
+    autorizzer: { price: 100, count: 0, priceSpan: 'autorizzer-price', countSpan: 'autorizzer-count', rate: 1 },
+    watermelonCat: { price: 1000, count: 0, priceSpan: 'watermelonCat-price', countSpan: 'watermelonCat-count', rate: 200 },
+    enhancedInstagram: { price: 5000, count: 0, priceSpan: 'enhancedInstagram-price', countSpan: 'enhancedInstagram-count', rate: 200 },
+    saulGoodman: { price: 15000, count: 0, priceSpan: 'saulGoodman-price', countSpan: 'saulGoodman-count', rate: 8880 },
+    babyGronk: { price: 20000, count: 0, priceSpan: 'babyGronk-price', countSpan: 'babyGronk-count', rate: 3291 },
+    bugattiChiron: { price: 4000000, count: 0, priceSpan: 'bugattiChiron-price', countSpan: 'bugattiChiron-count', rate: 150000 },
+    airbusA380: { price: 7500000, count: 0, priceSpan: 'airbusA380-price', countSpan: 'airbusA380-count', rate: 500000 },
 };
 
 function setMultiplier(multiplier) {
@@ -52,6 +52,17 @@ function updatePrices() {
         priceSpan.textContent = `Price: ${upgrades[upgrade].price * buyMultiplier}`;
     }
 }
+
+// Rizz gen from upgrades
+setInterval(() => {
+    let rizzPerSecond = 0;
+    for (const upgrade in upgrades) {
+        rizzPerSecond += upgrades[upgrade].count * upgrades[upgrade].rate;
+    }
+    rizzCounter += rizzPerSecond;
+    rizzCounterSpan.textContent = rizzCounter;
+}, 1000);
+
 
 function buyItem(upgrade) {
     let quantity = buyMultiplier;
