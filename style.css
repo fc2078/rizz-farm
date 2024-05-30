@@ -43,8 +43,21 @@
     display: flex;
 }
 
+/* Clicker styling */
 #clicker {
     width: 250px;
+    margin: 3pt;
+    border-radius: 10px;
+}
+
+#clicker:hover {
+    width: 270px;
+    margin: 3pt;
+    border-radius: 10px;
+}
+
+#clicker:active {
+    width: 230px;
     margin: 3pt;
     border-radius: 10px;
 }
@@ -55,12 +68,29 @@
     padding: 3px;
 }
 
+/* Style the color around the clicker */
 #clickButton {
     background-color: #16b15c;
     border-radius: 20px;
     padding: 5px;
     margin: 3px;
-    border: black;
+    border: solid black 2px;
+}
+
+#clickButton:hover {
+    background-color: #86A873;
+    border-radius: 20px;
+    padding: 5px;
+    margin: 3px;
+    border: solid #095256 5px;
+}
+
+#clickButton:active {
+    background-color: red;
+    border-radius: 20px;
+    padding: 5px;
+    margin: 3px;
+    border: solid black 3px;
 }
 
 .Upgrades {
@@ -86,24 +116,24 @@
 
 .upgrade-item:hover {
     font-size: 15pt;
-    /* padding: 15px;
-    margin: 5px;
-    border-radius: 30px;
-    align-items: center;
-    background-color: #095256;
-    border: solid white 3px;
-    border-radius: 20px; */
-
-}
-
-.upgrade-item:onclick {
-    /* font-size: 15pt;
     padding: 15px;
     margin: 5px;
     border-radius: 30px;
     align-items: center;
-    background-color: #095256;
-    border: solid white 3px; */
+    background-color: #86A873;
+    border: solid #087F8C 3px;
+    border-radius: 20px;
+
+}
+
+.upgrade-item:active {
+    font-size: 15pt;
+    padding: 15px;
+    margin: 5px;
+    border-radius: 30px;
+    align-items: center;
+    background-color: red;
+    border: solid black 3px;
     border-radius: 20px;
 }
 /*  */

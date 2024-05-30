@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sigma Rizz Farm: Grow your Rizz</title>
+    <link rel="icon" href="imgs/moyai.webp">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -35,28 +36,28 @@
             <div id="ug-items">
                 <button class="upgrade-item" onclick="buyRizzBoost()" id="rizzBoost"><img src="imgs/greenUpArrow.png"
                         class="upg-img"><br>Rizz Boost<br><span id="rizzBoostCost">Cost: 20 Rizz</span><br><span
-                        id="rizzBoostCounter">Amount Owned:</span></button>
-                <button class="upgrade-item" onclick="buyautoRizzer()"><img src="imgs/autoRizzer.jpg"
+                        id="rizzBoostOwned">Amount Owned: 0</span></button>
+                <button class="upgrade-item" onclick="buyAutorizzer()" id="autorizzer"><img src="imgs/autoRizzer.jpg"
                         class="upg-img"><br>Autorizzer<br><span id="autorizzerCost">Cost: 50 Rizz</span><br><span
-                        id="autorizzerAmt">Amount Owned:</span></button>
-                <button class="upgrade-item" onclick="buyWatermelonCat()"><img src="imgs/watermelonCat.png"
+                        id="autorizzerOwned">Amount Owned: 0</span></button>
+                <button class="upgrade-item" onclick="buyWatermelonCat()" id="watermelonCat"><img src="imgs/watermelonCat.png"
                         class="upg-img"><br>Watermelon Cat<br><span id="watermelonCatCost">Cost: 120
-                        Rizz</span><br><span id="watermelonCatAmt">Amount Owned:</span></button>
-                <button class="upgrade-item" onclick="buyEnhancedInstagram()"><img src="imgs/instagramIcon.webp"
-                        class="upg-img"><br>Enhanced Instagram<br><span id="enhancedInstagramCost">Cost: 250
-                        Rizz</span><br><span id="enhancedInstagramAmt">Amount Owned:</span></button>
-                <button class="upgrade-item" onclick="buySaulGoodman()"><img src="imgs/saulGoodman.jpg"
+                        Rizz</span><br><span id="watermelonCatOwbned">Amount Owned: 0</span></button>
+                <button class="upgrade-item" onclick="buyEnhancedInstagram()" id="enhancedInstagram"><img src="imgs/instagramIcon.webp"
+                        class="upg-img" ><br>Enhanced Instagram<br><span id="enhancedInstagramCost">Cost: 250
+                        Rizz</span><br><span id="enhancedInstagramOwned">Amount Owned: 0</span></button>
+                <button class="upgrade-item" onclick="buySaulGoodman()" id="saulGoodman"><img src="imgs/saulGoodman.jpg"
                         class="upg-img"><br>Saul Goodman<br><span id="saulGoodmanCost">Cost: 400 Rizz</span><br><span
-                        id="saulGoodmanAmt">Amount Owned:</span></button>
-                <button class="upgrade-item" onclick="buyBabyGronk()"><img src="imgs/babyGronk.jpg"
+                        id="saulGoodmanOwned">Amount Owned: 0</span></button>
+                <button class="upgrade-item" onclick="buyBabyGronk()" id="babyGronk"><img src="imgs/babyGronk.jpg"
                         class="upg-img"><br>Baby Gronk<br><span id="babyGronkCost">Cost: 650 Rizz</span><br><span
-                        id="babyGronkAmt">Amount Owned:</span></button>
-                <button class="upgrade-item" onclick="buyBugattiChiron()"><img src="imgs/bugattiChiron.jpg"
+                        id="babyGronkOwned">Amount Owned: 0</span></button>
+                <button class="upgrade-item" onclick="buyBugattiChiron()" id="bugattiChiron"><img src="imgs/bugattiChiron.jpg"
                         class="upg-img"><br>Bugatti Chiron<br><span id="bugattiChironCost">Cost: 1000 Rizz</span><br
-                        id="bugattiChironAmt"><span>Amount Owned:</span></button>
-                <button class="upgrade-item" onclick="buyAirbusA380()"><img src="imgs/airbusA380.webp"
+                        id="bugattiChironOwned"><span>Amount Owned: 0</span></button>
+                <button class="upgrade-item" onclick="buyAirbusA380()" id="airbusA380"><img src="imgs/airbusA380.webp"
                         class="upg-img"><br>Airbus A380<br><span id="airbusA380Cost">Cost: 2000 Rizz</span><br><span
-                        id="airbusA380Amt">Amount Owned:</span></button>
+                        id="airbusA380Owned">Amount Owned: 0</span></button>
             </div>
         </div>
         <div class="Rizz-and-Stats">
@@ -64,11 +65,9 @@
             <img src="imgs/moyai.webp" id="moyai">
             <h4>Stats and insights:
                 <ul id="stats">
-                    <li>Highest rizz ever achieved: 0</li>
-                    <li>Average rizz per second: 0</li>
-                    <li>Autoclicker rate: 0/sec</li>
-                    <li>Time played: 0h 0m 0s</li>
-                    <li>Sigma yet?: No</li>
+                    <li>Autorizzer rate: <span id="autoRizzerRate"></span>/sec</li>
+                    <li>Time played: <span id="timePlayed"></span></li>
+                    <li>Sigma yet?: <span id="sigmaStatus">No</span></li>
                 </ul>
             </h4>
         </div>
