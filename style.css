@@ -30,9 +30,23 @@
     justify-content: center;
 }
 
+.Clicker p.clickerInfo {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 14pt;
+}
+
+#clickerDiv {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
 #clicker {
     width: 250px;
     margin: 3pt;
+    border-radius: 10px;
 }
 
 #clickme {
@@ -58,6 +72,7 @@
     padding: 10px;
 }
 
+/* Upgrade button styling */
 .upgrade-item {
     font-size: 15pt;
     padding: 15px;
@@ -68,6 +83,30 @@
     border: solid white 3px;
     border-radius: 20px;
 }
+
+.upgrade-item:hover {
+    font-size: 15pt;
+    /* padding: 15px;
+    margin: 5px;
+    border-radius: 30px;
+    align-items: center;
+    background-color: #095256;
+    border: solid white 3px;
+    border-radius: 20px; */
+
+}
+
+.upgrade-item:onclick {
+    /* font-size: 15pt;
+    padding: 15px;
+    margin: 5px;
+    border-radius: 30px;
+    align-items: center;
+    background-color: #095256;
+    border: solid white 3px; */
+    border-radius: 20px;
+}
+/*  */
 
 h2 {
     text-align: center;
