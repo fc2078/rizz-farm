@@ -19,25 +19,33 @@
         </div>
         <div class="Clicker">
             <h2 id="clickme">↓ Click Me! ↓</h2>
-            <button id="clickButton">
+            <button id="clickButton" onclick="increaseRizz()">
                 <img src="imgs/patrickBateman.jpeg" alt="Patrick Bateman sigma face." id="clicker">
             </button>
         </div>
         <div class="Upgrades">
             <h2>Upgrades</h2>
             <div id="ug-items">
-                <button class="upgrade-item" onclick="buyItem('rizzBoost'); buyRizzBoost()"><img src="imgs/greenUpArrow.png" class="upg-img">Rizz Boost (+5/click): 20 Rizz</button>
-                <button class="upgrade-item" onclick="buyItem('autorizzer'); buyAutoRizzer()"><img src="imgs/autoRizzer.jpg" class="upg-img">Autorizzer (+1/second): 100 Rizz</button>
-                <button class="upgrade-item" onclick="buyItem('watermelonCat'); buyWatermelonCat()"><img src="imgs/watermelonCat.png" class="upg-img">Watermelon Cat: 1,000 Rizz</button>
-                <button class="upgrade-item" onclick="buyItem('enhancedInstagram'); buyEnhancedInstagram()"><img src="imgs/instagramIcon.webp" class="upg-img">Enhanced Instagram: 5,000 Rizz</button>
-                <button class="upgrade-item" onclick="buyItem('saulGoodman'); buySaulGoodman()"><img src="imgs/saulGoodman.jpg" class="upg-img">Saul Goodman: 15,000 Rizz</button>
-                <button class="upgrade-item" onclick="buyItem('babyGronk'); buyBabyGronk()"><img src="imgs/babyGronk.jpg" class="upg-img">Baby Gronk: 20,000 Rizz</button>
-                <button class="upgrade-item" onclick="buyItem('bugattiChiron'); buyBugattiChiron()"><img src="imgs/bugattiChiron.jpg"  class="upg-img">Bugatti Chiron: 100,000 Rizz</button>
-                <button class="upgrade-item" onclick="buyItem('airbusA380'); buyAirbusA380()"><img src="imgs/airbusA380.webp"  class="upg-img">Airbus A380: 250,000 Rizz</button>
+                <button class="upgrade-item" onclick="buyRizzBoost()"><img src="imgs/greenUpArrow.png"
+                        class="upg-img"><br>Rizz Boost<br>Cost: <span id="rizzBoostCost">20 Rizz</span><br><span id="rizzBoostAmt">Amount Owned:</span></button>
+                <button class="upgrade-item" onclick="buyautoRizzer()"><img src="imgs/autoRizzer.jpg"
+                        class="upg-img"><br>Autorizzer<br>Cost: <span id="autoRizzerCost">50 Rizz</span><br><span id="autoRizzerAmt"><br>Amount Owned:</span></button>
+                <button class="upgrade-item" onclick="buyWatermelonCat()"><img src="imgs/watermelonCat.png"
+                        class="upg-img"><br>Watermelon Cat<br>Cost: <span id="watermelonCatCost">120 Rizz</span><br><span id="watermelonCatAmt">Amount Owned:</span></button>
+                <button class="upgrade-item" onclick="buyEnhancedInstagram()"><img src="imgs/instagramIcon.webp"
+                        class="upg-img"><br>Enhanced Instagram<br>Cost: <span id="enhancedInstagramCost">250 Rizz</span><br><span id="enhancedInstagramAmt">Amount Owned:</span></button>
+                <button class="upgrade-item" onclick="buySaulGoodman()"><img src="imgs/saulGoodman.jpg"
+                        class="upg-img"><br>Saul Goodman<br>Cost: <span id="saulGoodmanCost">400 Rizz</span><br><span id="saulGoodmanAmt">Amount Owned:</span></button>
+                <button class="upgrade-item" onclick="buyBabyGronk()"><img src="imgs/babyGronk.jpg" 
+                        class="upg-img"><br>Baby Gronk<br>Cost: <span id="babyGronkCost">650 Rizz</span><br><span id="babyGronkAmt">Amount Owned:</span></button>
+                <button class="upgrade-item" onclick="buyBugattoChiron()"><img src="imgs/bugattiChiron.jpg"
+                        class="upg-img"><br>Bugatti Chiron<br>Cost: <span id="bugattiChironCost">1000 Rizz</span><br id="bugattiChironAmt"><span>Amount Owned:</span></button>
+                <button class="upgrade-item" onclick="buyAirbusA380()"><img src="imgs/airbusA380.webp"
+                        class="upg-img"><br>Airbus A380<br>Cost: <span id="airbusA380Cost">2000 Rizz</span><br><span id="airbusA380Amt">Amount Owned:</span></button>
             </div>
         </div>
         <div class="Rizz-and-Stats">
-            <h2 id="rizzstat">Your Rizz: <span id="rizz-counter">0</span></h2>
+            <h2 id="rizz"></h2>
             <img src="imgs/moyai.webp" id="moyai">
             <h4>Stats and insights:
                 <ul id="stats">
@@ -50,7 +58,7 @@
             </h4>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="test.js"></script>
 </body>
 
 </html>
