@@ -8,11 +8,30 @@ function addRizz() {
     counter = counter + 1 + (1.5 * rizzBoostCounter)
     rizz.innerText = "Your Rizz: " + counter
 }
-
+// 
 // Statistics setup
 let autoRizz = 0
 let autoRizzRate = document.getElementById("autoRizzRate")
 
+// Clock for how long the user has played
+document.addEventListener('DOMContentLoaded', () => {
+    const clockElement = document.getElementById('clock');
+    let startTime = Date.now();
+
+    function updateClock() {
+        let elapsedTime = Date.now() - startTime;
+        let seconds = Math.floor((elapsedTime / 1000) % 60);
+        let minutes = Math.floor((elapsedTime / (1000 * 60)) % 60);
+        let hours = Math.floor((elapsedTime / (1000 * 60 * 60)) % 24);
+
+        clockElement.textContent =
+            `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+    }
+
+    setInterval(updateClock, 1000);
+    updateClock(); // Initial call to display 00:00:00 immediately
+});
+// 
 // Upgrades setup
 let rizzBoostCounter = 0
 let rizzBoost = document.getElementById("rizzBoostOwned")
@@ -53,8 +72,27 @@ let airbusA380Counter = 0;
 let airbusA380 = document.getElementById('airbusA380Owned')
 let airbusA380Cost = document.getElementById("airbusA380Cost")
 airbusA380.innerText = "Amount Owned: 0";
+// 
 
 // Purchasing upgrades
+function buyAirbusA380() {
+    let airbusA380Price = 2000 + airbusA380Counter ** 1.5
+    airbusA380Cost.innerText = "Cost: " + airbusA380Price.toFixed(0) + " Rizz"
+    if (counter >= airbusA380Price.toFixed(0)) {
+        counter = counter - airbusA380Price.toFixed(0)
+        rizz.innerText = "Your Rizz: " + counter
+        airbusA380Counter = airbusA380Counter + 1
+        airbusA380.innerText = "Amount Owned: " + airbusA380Counter
+        airbusA380Price = 2000 + airbusA380Counter ** 1.5
+        airbusA380Cost.innerText = "Cost: " + airbusA380Price.toFixed(0) + " Rizz"
+    }
+    else {
+        let airbusA380Left = airbusA380Price.toFixed(0) - counter
+        alert("Not enough rizz! You are very beta and broke. You need " + airbusA380Left + " more rizz to buy this upgrade SO STRIVE TO BECOME A SIGMA AND KEEP RIZZIN'!")
+    }
+    updateButtons()
+}
+
 function buyRizzBoost() {
     let rizzBoostPrice = 20 + rizzBoostCounter ** 1.5
     rizzBoostCost.innerText = "Cost: " + rizzBoostPrice.toFixed(0) + " Rizz"
@@ -181,25 +219,10 @@ function buyBugattiChiron() {
     updateButtons()
 }
 
-function buyAirbusA380() {
-    let airbusA380Price = 2000 + airbusA380Counter ** 1.5
-    airbusA380Cost.innerText = "Cost: " + airbusA380Price.toFixed(0) + " Rizz"
-    if (counter >= airbusA380Price.toFixed(0)) {
-        counter = counter - airbusA380Price.toFixed(0)
-        rizz.innerText = "Your Rizz: " + counter
-        airbusA380Counter = airbusA380Counter + 1
-        airbusA380.innerText = "Amount Owned: " + airbusA380Counter
-        airbusA380Price = 2000 + airbusA380Counter ** 1.5
-        airbusA380Cost.innerText = "Cost: " + airbusA380Price.toFixed(0) + " Rizz"
-    }
-    else {
-        let airbusA380Left = airbusA380Price.toFixed(0) - counter
-        alert("Not enough rizz! You are very beta and broke. You need " + airbusA380Left + " more rizz to buy this upgrade SO STRIVE TO BECOME A SIGMA AND KEEP RIZZIN'!")
-    }
-    updateButtons()
-}
 
-// Update buttons based on bprices
+// 
+
+// Update buttons based on prices
 function updateButtons() {
     document.getElementById("rizzBoost").disabled = points < rizzboostPrice
     document.getElementById("autorizzer").disabled = points < autorizzerPrice
@@ -218,7 +241,4 @@ function gameLoop() {
     autoRizz = (10 * autorizzerCounter)
     autoRizzRate.innerText = autoRizz
 }
-
-// Intervals
-// setInterval(gameLoop, 1000)
-// setInterval(checkPrice, 10);
+// 
