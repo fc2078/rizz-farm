@@ -30,6 +30,7 @@
             <p class="clickerInfo">Every upgrade owned will help you earn rizz faster and saves you the work.</p>
             <p class="clickerInfo">However, they get more expensive as you buy more.</p>
             <p class="clickerInfo">See how you're doing by looking at the stats below!</p>
+            <p class="clickerInfo">If desired, mute the music. The button is below your stats.</p>
         </div>
         <div class="Upgrades">
             <h2>Upgrades</h2>
@@ -43,7 +44,7 @@
                 <button class="upgrade-item" onclick="buyWatermelonCat()" id="watermelonCat"><img
                         src="imgs/watermelonCat.png" class="upg-img"><br>Watermelon Cat<br><span
                         id="watermelonCatCost">Cost: 120
-                        Rizz</span><br><span id="watermelonCatOwbned">Amount Owned: 0</span></button>
+                        Rizz</span><br><span id="watermelonCatOwned">Amount Owned: 0</span></button>
                 <button class="upgrade-item" onclick="buyEnhancedInstagram()" id="enhancedInstagram"><img
                         src="imgs/instagramIcon.webp" class="upg-img"><br>Enhanced Instagram<br><span
                         id="enhancedInstagramCost">Cost: 250
@@ -73,8 +74,11 @@
                     <li>Sigma yet?: <span id="sigmaStatus">No</span></li>
                 </ul>
             </h4>
+            <button id="muteButton" onclick="muteMusic()">Mute the Background!</button>
         </div>
     </div>
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js"></script>
     <script src="script.js"></script>
 </body>
 

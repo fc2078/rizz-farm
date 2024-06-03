@@ -102,8 +102,8 @@
     padding: 10px;
 }
 
-/* Upgrade button styling */
-.upgrade-item {
+/* Upgrade and mute button styling */
+.upgrade-item, #muteButton {
     font-size: 15pt;
     padding: 15px;
     margin: 5px;
@@ -123,10 +123,20 @@
     background-color: #86A873;
     border: solid #087F8C 3px;
     border-radius: 20px;
-
 }
 
-.upgrade-item:active {
+#muteButton:hover {
+    font-size: 15pt;
+    padding: 15px;
+    margin: 5px;
+    border-radius: 30px;
+    align-items: center;
+    background-color: #087F8C;
+    border: solid rgb(169, 105, 3) 3px;
+    border-radius: 20px;
+}
+
+.upgrade-item:active, #muteButton:active {
     font-size: 15pt;
     padding: 15px;
     margin: 5px;

@@ -7,8 +7,39 @@ rizz.innerText = "Your Rizz: 0"
 function addRizz() {
     counter = counter + 1 + (1.5 * rizzBoostCounter)
     rizz.innerText = "Your Rizz: " + counter
+    rizzSound.play()
 }
-// 
+//
+
+// Audios
+// Background music
+let backgroundMusic = new Howl({
+    src: ['auds/sigma.mp3'],
+    autoplay: true,
+    volume: .30,
+    loop: true,
+})
+// Pause the music
+function muteMusic() {
+    backgroundMusic.pause()
+}
+
+// Sound effects
+let rizzSound = new Howl({
+    src: ['auds/rizz.mp3'],
+    volume: 2, // Volume set higher due to the original file being too quiet
+})
+
+let rizzUpgrade = new Howl({
+    src: ['auds/rizzUpgrade.mp3'],
+    volume: .70,
+})
+
+let whatTheSigma = new Howl({
+    src: ['auds/whatTheSigma.mp3'],
+    volume: .70,
+})
+
 // Statistics setup
 let autoRizz = 0
 let autoRizzRate = document.getElementById("autoRizzRate")
@@ -32,6 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateClock(); // Initial call to display 00:00:00 immediately
 });
 // 
+
 // Upgrades setup
 let rizzBoostCounter = 0
 let rizzBoost = document.getElementById("rizzBoostOwned")
@@ -72,27 +104,9 @@ let airbusA380Counter = 0;
 let airbusA380 = document.getElementById('airbusA380Owned')
 let airbusA380Cost = document.getElementById("airbusA380Cost")
 airbusA380.innerText = "Amount Owned: 0";
-// 
+//
 
 // Purchasing upgrades
-function buyAirbusA380() {
-    let airbusA380Price = 2000 + airbusA380Counter ** 1.5
-    airbusA380Cost.innerText = "Cost: " + airbusA380Price.toFixed(0) + " Rizz"
-    if (counter >= airbusA380Price.toFixed(0)) {
-        counter = counter - airbusA380Price.toFixed(0)
-        rizz.innerText = "Your Rizz: " + counter
-        airbusA380Counter = airbusA380Counter + 1
-        airbusA380.innerText = "Amount Owned: " + airbusA380Counter
-        airbusA380Price = 2000 + airbusA380Counter ** 1.5
-        airbusA380Cost.innerText = "Cost: " + airbusA380Price.toFixed(0) + " Rizz"
-    }
-    else {
-        let airbusA380Left = airbusA380Price.toFixed(0) - counter
-        alert("Not enough rizz! You are very beta and broke. You need " + airbusA380Left + " more rizz to buy this upgrade SO STRIVE TO BECOME A SIGMA AND KEEP RIZZIN'!")
-    }
-    updateButtons()
-}
-
 function buyRizzBoost() {
     let rizzBoostPrice = 20 + rizzBoostCounter ** 1.5
     rizzBoostCost.innerText = "Cost: " + rizzBoostPrice.toFixed(0) + " Rizz"
@@ -103,9 +117,11 @@ function buyRizzBoost() {
         rizzBoost.innerText = "Amount Owned: " + rizzBoostCounter
         rizzBoostPrice = 20 + rizzBoostCounter ** 1.5
         rizzBoostCost.innerText = "Cost: " + rizzBoostPrice.toFixed(0) + " Rizz"
+        rizzUpgrade.play()
     }
     else {
         let rizzBoostLeft = rizzBoostPrice.toFixed(0) - counter
+        whatTheSigma.play();
         alert("Not enough rizz! You are very beta and broke. You need " + rizzBoostLeft + " more rizz to buy this upgrade SO STRIVE TO BECOME A SIGMA AND KEEP RIZZIN'!")
     }
     updateButtons()
@@ -121,9 +137,11 @@ function buyAutorizzer() {
         autorizzer.innerText = "Amount Owned: " + autorizzerCounter
         autorizzerPrice = 50 + autorizzerCounter ** 1.5
         autorizzerCost.innerText = "Cost: " + autorizzerPrice.toFixed(0) + " Rizz"
+        rizzUpgrade.play()
     }
     else {
         let autorizzerLeft = autorizzerPrice.toFixed(0) - counter
+        whatTheSigma.play();
         alert("Not enough rizz! You are very beta and broke. You need " + autorizzerLeft + " more rizz to buy this upgrade SO STRIVE TO BECOME A SIGMA AND KEEP RIZZIN'!")
     }
     updateButtons()
@@ -139,9 +157,11 @@ function buyWatermelonCat() {
         watermelonCat.innerText = "Amount Owned: " + watermelonCatCounter
         watermelonCatPrice = 50 + watermelonCatCounter ** 1.5
         watermelonCatCost.innerText = "Cost: " + watermelonCatPrice.toFixed(0) + " Rizz"
+        rizzUpgrade.play()
     }
     else {
         let watermelonCatLeft = watermelonCatPrice.toFixed(0) - counter
+        whatTheSigma.play();
         alert("Not enough rizz! You are very beta and broke. You need " + watermelonCatLeft + " more rizz to buy this upgrade SO STRIVE TO BECOME A SIGMA AND KEEP RIZZIN'!")
     }
     updateButtons()
@@ -157,9 +177,11 @@ function buyEnhancedInstagram() {
         enhancedInstagram.innerText = "Amount Owned: " + enhancedInstagramCounter
         enhancedInstagramPrice = 250 + enhancedInstagramCounter ** 1.5
         enhancedInstagramCost.innerText = "Cost: " + enhancedInstagramPrice.toFixed(0) + " Rizz"
+        rizzUpgrade.play()
     }
     else {
         let enhancedInstagramLeft = enhancedInstagramPrice.toFixed(0) - counter
+        whatTheSigma.play();
         alert("Not enough rizz! You are very beta and broke. You need " + enhancedInstagramLeft + " more rizz to buy this upgrade SO STRIVE TO BECOME A SIGMA AND KEEP RIZZIN'!")
     }
     updateButtons()
@@ -175,9 +197,11 @@ function buySaulGoodman() {
         saulGoodman.innerText = "Amount Owned: " + saulGoodmanCounter
         saulGoodmanPrice = 400 + saulGoodmanCounter ** 1.5
         saulGoodmanCost.innerText = "Cost: " + saulGoodmanPrice.toFixed(0) + " Rizz"
+        rizzUpgrade.play()
     }
     else {
         let saulGoodmanLeft = saulGoodmanPrice.toFixed(0) - counter
+        whatTheSigma.play();
         alert("Not enough rizz! You are very beta and broke. You need " + saulGoodmanLeft + " more rizz to buy this upgrade SO STRIVE TO BECOME A SIGMA AND KEEP RIZZIN'!")
     }
     updateButtons()
@@ -193,9 +217,11 @@ function buyBabyGronk() {
         babyGronk.innerText = "Amount Owned: " + babyGronkCounter
         babyGronkPrice = 650 + babyGronkCounter ** 1.5
         babyGronkCost.innerText = "Cost: " + babyGronkPrice.toFixed(0) + " Rizz"
+        rizzUpgrade.play()
     }
     else {
         let babyGronkLeft = babyGronkPrice.toFixed(0) - counter
+        whatTheSigma.play();
         alert("Not enough rizz! You are very beta and broke. You need " + babyGronkLeft + " more rizz to buy this upgrade SO STRIVE TO BECOME A SIGMA AND KEEP RIZZIN'!")
     }
     updateButtons()
@@ -211,15 +237,35 @@ function buyBugattiChiron() {
         bugattiChiron.innerText = "Amount Owned: " + bugattiChironCounter
         bugattiChironPrice = 1000 + bugattiChironCounter ** 1.5
         bugattiChironCost.innerText = "Cost: " + bugattiChironPrice.toFixed(0) + " Rizz"
+        rizzUpgrade.play()
     }
     else {
         let bugattiChironLeft = bugattiChironPrice.toFixed(0) - counter
+        whatTheSigma.play();
         alert("Not enough rizz! You are very beta and broke. You need " + bugattiChironLeft + " more rizz to buy this upgrade SO STRIVE TO BECOME A SIGMA AND KEEP RIZZIN'!")
     }
     updateButtons()
 }
 
-
+function buyAirbusA380() {
+    let airbusA380Price = 2000 + airbusA380Counter ** 1.5
+    airbusA380Cost.innerText = "Cost: " + airbusA380Price.toFixed(0) + " Rizz"
+    if (counter >= airbusA380Price.toFixed(0)) {
+        counter = counter - airbusA380Price.toFixed(0)
+        rizz.innerText = "Your Rizz: " + counter
+        airbusA380Counter = airbusA380Counter + 1
+        airbusA380.innerText = "Amount Owned: " + airbusA380Counter
+        airbusA380Price = 2000 + airbusA380Counter ** 1.5
+        airbusA380Cost.innerText = "Cost: " + airbusA380Price.toFixed(0) + " Rizz"
+        rizzUpgrade.play()
+    }
+    else {
+        let airbusA380Left = airbusA380Price.toFixed(0) - counter
+        whatTheSigma.play();
+        alert("Not enough rizz! You are very beta and broke. You need " + airbusA380Left + " more rizz to buy this upgrade SO STRIVE TO BECOME A SIGMA AND KEEP RIZZIN'!")
+    }
+    updateButtons()
+}
 // 
 
 // Update buttons based on prices
