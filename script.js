@@ -62,6 +62,10 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(updateClock, 1000);
     updateClock(); // Initial call to display 00:00:00 immediately
 });
+
+// Sigma status
+let sigmaStatus = document.getElementById('sigmaStatus');
+
 // 
 
 // Upgrades setup
@@ -281,14 +285,15 @@ function updateButtons() {
 }
 // 
 
-// Loop the game and apply the auto rizzers
+// Loop the game and apply the auto rizzers + sigma status
 function gameLoop() {
-    counter += (2 * autorizzerCounter) + (20 * watermelonCatCounter) + (35 * enhancedInstagramCounter) + (50 * saulGoodmanCounter) + (100 * babyGronkCounter) + (200 * bugattiChironCounter) + (500 * airbusA380Counter)
+    counter += (2 * autorizzerCounter) + (10 * watermelonCatCounter) + (25 * enhancedInstagramCounter) + (40 * saulGoodmanCounter) + (50 * babyGronkCounter) + (100 * bugattiChironCounter) + (200 * airbusA380Counter)
     rizz.innerText = "Your Rizz: " + counter
-    autoRizz = (10 * autorizzerCounter) + (20 * watermelonCatCounter) + (35 * enhancedInstagramCounter) + (50 * saulGoodmanCounter) + (100 * babyGronkCounter) + (200 * bugattiChironCounter) + (500 * airbusA380Counter)
+    autoRizz = (2 * autorizzerCounter) + (10 * watermelonCatCounter) + (25 * enhancedInstagramCounter) + (40 * saulGoodmanCounter) + (50 * babyGronkCounter) + (100 * bugattiChironCounter) + (200 * airbusA380Counter)
     autoRizzRate.innerText = autoRizz
-    autoRizz = (10 * autorizzerCounter)
-    autoRizzRate.innerText = autoRizz
+    if (counter >= 696969696969){
+        sigmaStatus.innerText = "Yes!"
+    }
 }
 // 
 
