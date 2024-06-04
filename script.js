@@ -268,7 +268,7 @@ function buyAirbusA380() {
 }
 // 
 
-// Update buttons based on prices
+// Update and disable buttons based on prices
 function updateButtons() {
     document.getElementById("rizzBoost").disabled = points < rizzboostPrice
     document.getElementById("autorizzer").disabled = points < autorizzerPrice
@@ -279,12 +279,20 @@ function updateButtons() {
     document.getElementById("bugattiChiron").disabled = points < bugattiChironPrice
     document.getElementById("airbusA380").disabled = points < airbusA380Price
 }
+// 
 
-// Loop the game and apply the upgrades
+// Loop the game and apply the auto rizzers
 function gameLoop() {
-    counter = counter + (5 * rizzBoostCounter) + (10 * autorizzerCounter) + (20 * watermelonCatCounter) + (35 * enhancedInstagramCounter) + (50 * saulGoodmanCounter) + (100 * babyGronkCounter) + (200 * bugattiChironCounter) + (500 * airbusA380Counter)
+    counter += (2 * autorizzerCounter) + (20 * watermelonCatCounter) + (35 * enhancedInstagramCounter) + (50 * saulGoodmanCounter) + (100 * babyGronkCounter) + (200 * bugattiChironCounter) + (500 * airbusA380Counter)
     rizz.innerText = "Your Rizz: " + counter
+    autoRizz = (10 * autorizzerCounter) + (20 * watermelonCatCounter) + (35 * enhancedInstagramCounter) + (50 * saulGoodmanCounter) + (100 * babyGronkCounter) + (200 * bugattiChironCounter) + (500 * airbusA380Counter)
+    autoRizzRate.innerText = autoRizz
     autoRizz = (10 * autorizzerCounter)
     autoRizzRate.innerText = autoRizz
 }
+// 
+
+// Update the game every 1 second to run the auto rizzers and update buttons
+setInterval(gameLoop, 1000)
+updateButtons()
 // 
