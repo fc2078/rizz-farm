@@ -1,8 +1,11 @@
+/* Apply font to entire site */
 * {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
 }
+/*  */
 
+/* Grid layout initialization */
 .container {
     display: grid;
     grid-template-columns: 1.4fr 1fr 1fr;
@@ -14,7 +17,9 @@
         "Clicker Upgrades Upgrades"
         "Rizz-and-Stats Upgrades Upgrades";
 }
+/*  */
 
+/* Div styling set by container */
 .sigma-rizz-farm {
     grid-area: sigma-rizz-farm;
     background-color: #095256;
@@ -30,38 +35,55 @@
     justify-content: center;
 }
 
-.Clicker p.clickerInfo {
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    font-size: 14pt;
+.Rizz-and-Stats {
+    grid-area: Rizz-and-Stats;
+    background-color: #86A873;
+    padding: 5px;
 }
 
+.Upgrades {
+    grid-area: Upgrades;
+    background-color: #5AAA95;
+}
+/*  */
+
+/* Individual element styling in div.Clicker */
+/* Info styling */
+.clickerInfo {
+    font-size: 14pt;
+    list-style-type: square;
+}
+
+/* Align whole button */
 #clickerDiv {
     align-items: center;
     justify-content: center;
     display: flex;
 }
 
-/* Clicker styling */
+/* Clicker image styling */
 #clicker {
     width: 250px;
     margin: 3pt;
     border-radius: 10px;
+    transition: transform 0.2s ease;
 }
 
 #clicker:hover {
     width: 270px;
     margin: 3pt;
     border-radius: 10px;
+    transform: scale(1.005);
 }
 
 #clicker:active {
     width: 230px;
     margin: 3pt;
     border-radius: 10px;
+    transform: scale(0.95);
 }
 
+/* Click Me! Director styling */
 #clickme {
     background-color: #16b15c;
     border-radius: 30px;
@@ -75,6 +97,7 @@
     padding: 5px;
     margin: 3px;
     border: solid black 2px;
+    transition: transform 0.2s ease;
 }
 
 #clickButton:hover {
@@ -83,6 +106,7 @@
     padding: 5px;
     margin: 3px;
     border: solid #095256 5px;
+    transform: scale(1.05);
 }
 
 #clickButton:active {
@@ -91,19 +115,12 @@
     padding: 5px;
     margin: 3px;
     border: solid black 3px;
+    transform: scale(0.95);
 }
+/*  */
 
-.Upgrades {
-    grid-area: Upgrades;
-    background-color: #5AAA95;
-}
-
-#ug-items {
-    padding: 10px;
-}
-
-/* Upgrade and mute button styling */
-.upgrade-item, #muteButton {
+/* Upgrade and music button styling */
+.upgrade-item, .musicButton {
     font-size: 15pt;
     padding: 15px;
     margin: 5px;
@@ -125,7 +142,7 @@
     border-radius: 20px;
 }
 
-#muteButton:hover {
+.musicButton:hover {
     font-size: 15pt;
     padding: 15px;
     margin: 5px;
@@ -136,7 +153,7 @@
     border-radius: 20px;
 }
 
-.upgrade-item:active, #muteButton:active {
+.upgrade-item:active, .musicButton:active {
     font-size: 15pt;
     padding: 15px;
     margin: 5px;
@@ -146,23 +163,21 @@
     border: solid black 3px;
     border-radius: 20px;
 }
-/*  */
 
-h2 {
-    text-align: center;
-}
-
-.Rizz-and-Stats {
-    grid-area: Rizz-and-Stats;
-    background-color: #86A873;
-    padding: 5px;
+#ug-items {
+    padding: 10px;
 }
 
 .upg-img {
     width: 75px;
     padding: 10px;
     border-radius: 20px;
-    
+
+}
+/*  */
+
+h2 {
+    text-align: center;
 }
 
 #moyai {
