@@ -41,8 +41,10 @@ let whatTheSigma = new Howl({
 })
 
 // Statistics setup
+// Rizz rates
 let autoRizz = 0
 let autoRizzRate = document.getElementById("autoRizzRate")
+let rizzRate = document.getElementById("rizzRate")
 
 // Clock for how long the user has played
 document.addEventListener('DOMContentLoaded', () => {
@@ -291,6 +293,7 @@ function gameLoop() {
     rizz.innerText = "Your Rizz: " + counter
     autoRizz = (2 * autorizzerCounter) + (10 * watermelonCatCounter) + (25 * enhancedInstagramCounter) + (40 * saulGoodmanCounter) + (50 * babyGronkCounter) + (100 * bugattiChironCounter) + (200 * airbusA380Counter)
     autoRizzRate.innerText = autoRizz
+    rizzRate.innerText = 1 + (1.5 * rizzBoostCounter)
     if (counter >= 696969696969){
         sigmaStatus.innerText = "Yes!"
     }
