@@ -28,6 +28,7 @@ function pauseMusic() {
 // Resume the music
 function resumeMusic() {
     backgroundMusic.play()
+    fooSound.play()
 }
 
 // Sound effects
@@ -38,17 +39,27 @@ let rizzSound = new Howl({
 
 let rizzUpgrade = new Howl({
     src: ['auds/rizzUpgrade.mp3'],
-    volume: .70,
+    volume: .7,
 })
 
 let whatTheSigma = new Howl({
     src: ['auds/whatTheSigma.mp3'],
-    volume: .70,
+    volume: .7,
 })
 
 let oofSound = new Howl({
     src: ['auds/oof.mp3'],
-    volume: .70,
+    volume: .7,
+})
+
+let fooSound = new Howl({
+    src: ['auds/foo.mp3'],
+    volume: .7,
+})
+
+let victorySound = new Howl({
+    src: ['auds/VICTORY.mp3'],
+    volume: .6,
 })
 // 
 
@@ -175,7 +186,7 @@ function buyWatermelonCat() {
     watermelonCatCost.innerText = "Cost: " + watermelonCatPrice.toFixed(0) + " Rizz"
     if (counter >= watermelonCatPrice.toFixed(0)) {
         counter = counter - watermelonCatPrice.toFixed(0)
-        rizz.innerText = "Your Rizz: " + counter
+        rizz.innerText = "Your Rizz: " + counter.toFixed(0)
         watermelonCatCounter = watermelonCatCounter + 1
         watermelonCat.innerText = "Amount Owned: " + watermelonCatCounter
         watermelonCatPrice = 130 + watermelonCatCounter ** 1.8
@@ -195,7 +206,7 @@ function buyEnhancedInstagram() {
     enhancedInstagramCost.innerText = "Cost: " + enhancedInstagramPrice.toFixed(0) + " Rizz"
     if (counter >= enhancedInstagramPrice.toFixed(0)) {
         counter = counter - enhancedInstagramPrice.toFixed(0)
-        rizz.innerText = "Your Rizz: " + counter
+        rizz.innerText = "Your Rizz: " + counter.toFixed(0)
         enhancedInstagramCounter = enhancedInstagramCounter + 1
         enhancedInstagram.innerText = "Amount Owned: " + enhancedInstagramCounter
         enhancedInstagramPrice = 275 + enhancedInstagramCounter ** 1.8
@@ -215,7 +226,7 @@ function buySaulGoodman() {
     saulGoodmanCost.innerText = "Cost: " + saulGoodmanPrice.toFixed(0) + " Rizz"
     if (counter >= saulGoodmanPrice.toFixed(0)) {
         counter = counter - saulGoodmanPrice.toFixed(0)
-        rizz.innerText = "Your Rizz: " + counter
+        rizz.innerText = "Your Rizz: " + counter.toFixed(0)
         saulGoodmanCounter = saulGoodmanCounter + 1
         saulGoodman.innerText = "Amount Owned: " + saulGoodmanCounter
         saulGoodmanPrice = 450 + saulGoodmanCounter ** 1.8
@@ -235,7 +246,7 @@ function buyBabyGronk() {
     babyGronkCost.innerText = "Cost: " + babyGronkPrice.toFixed(0) + " Rizz"
     if (counter >= babyGronkPrice.toFixed(0)) {
         counter = counter - babyGronkPrice.toFixed(0)
-        rizz.innerText = "Your Rizz: " + counter
+        rizz.innerText = "Your Rizz: " + counter.toFixed(0)
         babyGronkCounter = babyGronkCounter + 1
         babyGronk.innerText = "Amount Owned: " + babyGronkCounter
         babyGronkPrice = 670 + babyGronkCounter ** 1.8
@@ -255,7 +266,7 @@ function buyGym() {
     gymCost.innerText = "Cost: " + gymPrice.toFixed(0) + " Rizz"
     if (counter >= gymPrice.toFixed(0)) {
         counter = counter - gymPrice.toFixed(0)
-        rizz.innerText = "Your Rizz: " + counter
+        rizz.innerText = "Your Rizz: " + counter.toFixed(0)
         gymCounter = gymCounter + 1
         gym.innerText = "Amount Owned: " + gymCounter
         gymPrice = 800 + gymCounter ** 1.8
@@ -275,7 +286,7 @@ function buyBugattiChiron() {
     bugattiChironCost.innerText = "Cost: " + bugattiChironPrice.toFixed(0) + " Rizz"
     if (counter >= bugattiChironPrice.toFixed(0)) {
         counter = counter - bugattiChironPrice.toFixed(0)
-        rizz.innerText = "Your Rizz: " + counter
+        rizz.innerText = "Your Rizz: " + counter.toFixed(0)
         bugattiChironCounter = bugattiChironCounter + 1
         bugattiChiron.innerText = "Amount Owned: " + bugattiChironCounter
         bugattiChironPrice = 1370 + bugattiChironCounter ** 1.8
@@ -295,7 +306,7 @@ function buyAirbusA380() {
     airbusA380Cost.innerText = "Cost: " + airbusA380Price.toFixed(0) + " Rizz"
     if (counter >= airbusA380Price.toFixed(0)) {
         counter = counter - airbusA380Price.toFixed(0)
-        rizz.innerText = "Your Rizz: " + counter
+        rizz.innerText = "Your Rizz: " + counter.toFixed(0)
         airbusA380Counter = airbusA380Counter + 1
         airbusA380.innerText = "Amount Owned: " + airbusA380Counter
         airbusA380Price = 2500 + airbusA380Counter ** 1.8
@@ -303,9 +314,8 @@ function buyAirbusA380() {
         rizzUpgrade.play()
     }
     else {
-        let airbusA380Left = airbusA380Price.toFixed(0) - counter
         whatTheSigma.play();
-        alert("Not enough rizz! You are very beta and broke. You need " + airbusA380Left + " more rizz to buy this upgrade SO STRIVE TO BECOME A SIGMA AND KEEP RIZZIN'!")
+
     }
     updateButtons()
 }
@@ -328,13 +338,14 @@ function updateButtons() {
 // Loop the game and apply the auto rizzers + sigma status
 function gameLoop() {
     counter += (2 * autorizzerCounter) + (10 * watermelonCatCounter) + (25 * enhancedInstagramCounter) + (30 * gymCounter) + (40 * saulGoodmanCounter) + (50 * babyGronkCounter) + (100 * bugattiChironCounter) + (200 * airbusA380Counter)
-    rizz.innerText = "Your Rizz: " + counter
+    rizz.innerText = "Your Rizz: " + counter.toFixed(0)
     autoRizz = (2 * autorizzerCounter) + (10 * watermelonCatCounter) + (25 * enhancedInstagramCounter) + (30 * gymCounter) + (40 * saulGoodmanCounter) + (50 * babyGronkCounter) + (100 * bugattiChironCounter) + (200 * airbusA380Counter)
-    autoRizzRate.innerText = autoRizz
-    rizzRate.innerText = 1 + (1.8 * rizzBoostCounter)
-    if (counter >= 696969696969) {
-        sigmaStatus.innerText = "Yes!"
-
+    autoRizzRate.innerText = autoRizz.toFixed(0)
+    rizzRate.innerText = (1 + (1.8 * rizzBoostCounter)).toFixed(0)
+    if (counter == 696969696969) {
+        sigmaStatus.innerText = "Yes!" + " Copy and paste this link for what to do next: https://drive.google.com/file/d/1-FlrOHVEU8gv3yVgmocVuCobxBiRzH_v/view?usp=sharing"
+        victorySound.play()
+        alert('Congratulations! You have officially become a sigma! Come collect your prize at the link in your statistcs!')
     }
 }
 // 
@@ -342,4 +353,5 @@ function gameLoop() {
 // Update the game every 1 second to run the auto rizzers and update buttons
 setInterval(gameLoop, 1000)
 updateButtons()
-// 
+//
+// ENSURE ALL COUNTERS AND RIZZ RATES HAVE THE .toFixed(0) METHOD TO ROUND ALL VALUES TO THE NEAREST WHOLE.
