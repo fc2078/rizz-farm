@@ -28,22 +28,6 @@
                     <img src="imgs/patrickBateman.jpeg" alt="Patrick Bateman sigma face." id="clicker">
                 </button>
             </div>
-            <!-- Instructions for the player -->
-            <h3>What to do? I'm beta and I don't know.</h3>
-            <p class="clickerInfo">Let's earn that rizz and grind to become a sigma!</p>
-            <ul class="clickerInfo">
-                <li>It's obvious that you can't become sigma on your own... so <strong>buy some upgrades!</strong></li>
-                <br>
-                <li>Every upgrade owned will help you <strong>earn rizz faster</strong> and saves you the work!</li>
-                <br>
-                <li>The rizz boost aids you at every click. <strong>Earn more rizz as you click.</strong> The autorizzer <strong>automatically rizzes for you.</strong> All of the other upgrades aid you as well, and serve an exquisite purpose to help you become a sigma!</li>
-                <br>
-                <li>Upgrades become <strong>more powerful as you own more</strong>. However, they also <strong>more expensive as you buy more</strong>, so <strong>buy wisely</strong></li>
-                <br>
-                <li>See how you're doing by looking at the stats below!</li>
-                <br>
-                <li>If the music bothers you, mute it. If you want it again, resume it! The buttons are <strong>below your stats.</strong></li>
-            </ul>
         </div>
         <!--  -->
         <!-- Upgrades section: Rizz boost and auto rizz upgrades (dynamically increases in price)-->
@@ -54,31 +38,35 @@
                         class="upg-img"><br>Rizz Boost<br><span id="rizzBoostCost">Cost: 25 Rizz</span><br><span
                         id="rizzBoostOwned">Amount Owned: 0</span></button>
                 <button class="upgrade-item" onclick="buyAutorizzer()" id="autorizzer"><img src="imgs/autoRizzer.jpg"
-                        class="upg-img"><br>Autorizzer<br><span id="autorizzerCost">Cost: 60 Rizz</span><br><span
+                        class="upg-img"><br>Autorizzer<br><span id="autorizzerCost">Cost: 100 Rizz</span><br><span
                         id="autorizzerOwned">Amount Owned: 0</span></button>
                 <button class="upgrade-item" onclick="buyWatermelonCat()" id="watermelonCat"><img
                         src="imgs/watermelonCat.png" class="upg-img"><br>Watermelon Cat<br><span
-                        id="watermelonCatCost">Cost: 130
+                        id="watermelonCatCost">Cost: 250
                         Rizz</span><br><span id="watermelonCatOwned">Amount Owned: 0</span></button>
                 <button class="upgrade-item" onclick="buyEnhancedInstagram()" id="enhancedInstagram"><img
                         src="imgs/instagramIcon.webp" class="upg-img"><br>Enhanced Instagram<br><span
-                        id="enhancedInstagramCost">Cost: 275
+                        id="enhancedInstagramCost">Cost: 680
                         Rizz</span><br><span id="enhancedInstagramOwned">Amount Owned: 0</span></button>
                 <button class="upgrade-item" onclick="buySaulGoodman()" id="saulGoodman"><img src="imgs/saulGoodman.jpg"
-                        class="upg-img"><br>Saul Goodman<br><span id="saulGoodmanCost">Cost: 450 Rizz</span><br><span
+                        class="upg-img"><br>Saul Goodman<br><span id="saulGoodmanCost">Cost: 1000 Rizz</span><br><span
                         id="saulGoodmanOwned">Amount Owned: 0</span></button>
                 <button class="upgrade-item" onclick="buyBabyGronk()" id="babyGronk"><img src="imgs/babyGronk.jpg"
-                        class="upg-img"><br>Baby Gronk<br><span id="babyGronkCost">Cost: 670 Rizz</span><br><span
+                        class="upg-img"><br>Baby Gronk<br><span id="babyGronkCost">Cost: 1865 Rizz</span><br><span
                         id="babyGronkOwned">Amount Owned: 0</span></button>
                 <button class="upgrade-item" onclick="buyGym()" id="gym"><img src="imgs/larryLobster.jpeg"
-                        class="upg-img"><br>Gym<br><span id="gymCost">Cost: 800 Rizz</span><br><span
+                        class="upg-img"><br>Gym<br><span id="gymCost">Cost: 2975 Rizz</span><br><span
                         id="gymOwned">Amount Owned: 0</span></button>
                 <button class="upgrade-item" onclick="buyBugattiChiron()" id="bugattiChiron"><img
                         src="imgs/bugattiChiron.jpg" class="upg-img"><br>Bugatti Chiron<br><span
-                        id="bugattiChironCost">Cost: 1370 Rizz</span><br><span id="bugattiChironOwned">Amount Owned:
+                        id="bugattiChironCost">Cost: 4500 Rizz</span><br><span id="bugattiChironOwned">Amount Owned:
+                        0</span></button>
+                <button class="upgrade-item" onclick="buyBoeing747()" id="boeing747"><img src="imgs/boeing747.jpeg"
+                        class="upg-img"><br>Boeing 747<br><span id="boeing747Cost">Cost: 8000 Rizz</span><br><span
+                        id="boeing747Owned">Amount Owned:
                         0</span></button>
                 <button class="upgrade-item" onclick="buyAirbusA380()" id="airbusA380"><img src="imgs/airbusA380.webp"
-                        class="upg-img"><br>Airbus A380<br><span id="airbusA380Cost">Cost: 2500 Rizz</span><br><span
+                        class="upg-img"><br>Airbus A380<br><span id="airbusA380Cost">Cost: 15000 Rizz</span><br><span
                         id="airbusA380Owned">Amount Owned: 0</span></button>
             </div>
         </div>
@@ -98,6 +86,29 @@
             </h4>
             <button class="musicButton" onclick="pauseMusic()">Pause the music!</button>
             <button class="musicButton" onclick="resumeMusic()">Resume the music!</button>
+        </div>
+        <!-- Instructions for the user -->
+        <div class="how-to-play">
+            <h2>What to do? I'm beta and I don't know.</h2>
+            <p class="clickerInfo">Let's earn that rizz and grind to become a sigma!</p>
+            <ul class="clickerInfo">
+                <li>It's obvious that you can't become sigma on your own... so <strong>buy some upgrades!</strong></li>
+                <br>
+                <li>Every upgrade owned will help you <strong>earn rizz faster</strong> and saves you the work!</li>
+                <br>
+                <li>The rizz boost aids you at every click. <strong>Earn more rizz as you click.</strong> The autorizzer
+                    <strong>automatically rizzes for you.</strong> All of the other upgrades aid you as well, and serve
+                    an exquisite purpose to help you become a sigma!</li>
+                <br>
+                <li>Upgrades become <strong>more powerful as you own more</strong>. However, they also <strong>more
+                        expensive as you buy more</strong>, so <strong>buy wisely</strong></li>
+                <br>
+                <li>See how you're doing by looking at the stats above!</li>
+                <br>
+                <li>If the music bothers you, mute it. If you want it again, resume it! The buttons are <strong>below
+                        your stats.</strong></li>
+            </ul>
+
         </div>
         <!--  -->
     </div>
