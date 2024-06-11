@@ -147,14 +147,14 @@ airbusA380.innerText = "Amount Owned: 0";
 
 // Purchasing upgrades
 function buyRizzBoost() {
-    let rizzBoostPrice = 25 + rizzBoostCounter ** 1.99
+    let rizzBoostPrice = 25 + rizzBoostCounter ** 1.999
     rizzBoostCost.innerText = "Cost: " + rizzBoostPrice.toFixed(0) + " Rizz"
     if (counter >= rizzBoostPrice.toFixed(0)) {
         counter = counter - rizzBoostPrice.toFixed(0)
         rizz.innerText = "Your Rizz: " + counter.toFixed(0)
         rizzBoostCounter = rizzBoostCounter + 1
         rizzBoost.innerText = "Amount Owned: " + rizzBoostCounter
-        rizzBoostPrice = 25 + rizzBoostCounter ** 1.99
+        rizzBoostPrice = 25 + rizzBoostCounter ** 1.999
         rizzBoostCost.innerText = "Cost: " + rizzBoostPrice.toFixed(0) + " Rizz"
         rizzUpgrade.play()
     }
@@ -165,14 +165,14 @@ function buyRizzBoost() {
 }
 
 function buyAutorizzer() {
-    let autorizzerPrice = 100 + autorizzerCounter ** 1.99
+    let autorizzerPrice = 150 + autorizzerCounter ** 1.999
     autorizzerCost.innerText = "Cost: " + autorizzerPrice.toFixed(0) + " Rizz"
     if (counter >= autorizzerPrice.toFixed(0)) {
         counter = counter - autorizzerPrice.toFixed(0)
         rizz.innerText = "Your Rizz: " + counter.toFixed(0)
         autorizzerCounter = autorizzerCounter + 1
         autorizzer.innerText = "Amount Owned: " + autorizzerCounter
-        autorizzerPrice = 100 + autorizzerCounter ** 1.99
+        autorizzerPrice = 150 + autorizzerCounter ** 1.999
         autorizzerCost.innerText = "Cost: " + autorizzerPrice.toFixed(0) + " Rizz"
         rizzUpgrade.play()
     }
@@ -183,14 +183,14 @@ function buyAutorizzer() {
 }
 
 function buyWatermelonCat() {
-    let watermelonCatPrice = 250 + watermelonCatCounter ** 1.99
+    let watermelonCatPrice = 300 + watermelonCatCounter ** 1.999
     watermelonCatCost.innerText = "Cost: " + watermelonCatPrice.toFixed(0) + " Rizz"
     if (counter >= watermelonCatPrice.toFixed(0)) {
         counter = counter - watermelonCatPrice.toFixed(0)
         rizz.innerText = "Your Rizz: " + counter.toFixed(0)
         watermelonCatCounter = watermelonCatCounter + 1
         watermelonCat.innerText = "Amount Owned: " + watermelonCatCounter
-        watermelonCatPrice = 250 + watermelonCatCounter ** 1.99
+        watermelonCatPrice = 300 + watermelonCatCounter ** 1.999
         watermelonCatCost.innerText = "Cost: " + watermelonCatPrice.toFixed(0) + " Rizz"
         rizzUpgrade.play()
     }
@@ -201,14 +201,14 @@ function buyWatermelonCat() {
 }
 
 function buyEnhancedInstagram() {
-    let enhancedInstagramPrice = 680 + enhancedInstagramCounter ** 1.99
+    let enhancedInstagramPrice = 720 + enhancedInstagramCounter ** 1.999
     enhancedInstagramCost.innerText = "Cost: " + enhancedInstagramPrice.toFixed(0) + " Rizz"
     if (counter >= enhancedInstagramPrice.toFixed(0)) {
         counter = counter - enhancedInstagramPrice.toFixed(0)
         rizz.innerText = "Your Rizz: " + counter.toFixed(0)
         enhancedInstagramCounter = enhancedInstagramCounter + 1
         enhancedInstagram.innerText = "Amount Owned: " + enhancedInstagramCounter
-        enhancedInstagramPrice = 680 + enhancedInstagramCounter ** 1.99
+        enhancedInstagramPrice = 720 + enhancedInstagramCounter ** 1.999
         enhancedInstagramCost.innerText = "Cost: " + enhancedInstagramPrice.toFixed(0) + " Rizz"
         rizzUpgrade.play()
     }
@@ -219,14 +219,14 @@ function buyEnhancedInstagram() {
 }
 
 function buySaulGoodman() {
-    let saulGoodmanPrice = 1000 + saulGoodmanCounter ** 1.99
+    let saulGoodmanPrice = 1500 + saulGoodmanCounter ** 1.999
     saulGoodmanCost.innerText = "Cost: " + saulGoodmanPrice.toFixed(0) + " Rizz"
     if (counter >= saulGoodmanPrice.toFixed(0)) {
         counter = counter - saulGoodmanPrice.toFixed(0)
         rizz.innerText = "Your Rizz: " + counter.toFixed(0)
         saulGoodmanCounter = saulGoodmanCounter + 1
         saulGoodman.innerText = "Amount Owned: " + saulGoodmanCounter
-        saulGoodmanPrice = 1000 + saulGoodmanCounter ** 1.99
+        saulGoodmanPrice = 1500 + saulGoodmanCounter ** 1.999
         saulGoodmanCost.innerText = "Cost: " + saulGoodmanPrice.toFixed(0) + " Rizz"
         rizzUpgrade.play()
     }
@@ -237,14 +237,14 @@ function buySaulGoodman() {
 }
 
 function buyBabyGronk() {
-    let babyGronkPrice = 1865 + babyGronkCounter ** 1.99
+    let babyGronkPrice = 2870 + babyGronkCounter ** 1.999
     babyGronkCost.innerText = "Cost: " + babyGronkPrice.toFixed(0) + " Rizz"
     if (counter >= babyGronkPrice.toFixed(0)) {
         counter = counter - babyGronkPrice.toFixed(0)
         rizz.innerText = "Your Rizz: " + counter.toFixed(0)
         babyGronkCounter = babyGronkCounter + 1
         babyGronk.innerText = "Amount Owned: " + babyGronkCounter
-        babyGronkPrice = 1865 + babyGronkCounter ** 1.99
+        babyGronkPrice = 2870 + babyGronkCounter ** 1.999
         babyGronkCost.innerText = "Cost: " + babyGronkPrice.toFixed(0) + " Rizz"
         rizzUpgrade.play()
     }
@@ -255,14 +255,14 @@ function buyBabyGronk() {
 }
 
 function buyGym() {
-    let gymPrice = 2975 + gymCounter ** 1.99
+    let gymPrice = 5000 + gymCounter ** 1.999
     gymCost.innerText = "Cost: " + gymPrice.toFixed(0) + " Rizz"
     if (counter >= gymPrice.toFixed(0)) {
         counter = counter - gymPrice.toFixed(0)
         rizz.innerText = "Your Rizz: " + counter.toFixed(0)
         gymCounter = gymCounter + 1
         gym.innerText = "Amount Owned: " + gymCounter
-        gymPrice = 2975 + gymCounter ** 1.99
+        gymPrice = 5000 + gymCounter ** 1.999
         gymCost.innerText = "Cost: " + gymPrice.toFixed(0) + " Rizz"
         rizzUpgrade.play()
     }
@@ -273,14 +273,14 @@ function buyGym() {
 }
 
 function buyBugattiChiron() {
-    let bugattiChironPrice = 4500 + bugattiChironCounter ** 1.99
+    let bugattiChironPrice = 9900 + bugattiChironCounter ** 1.999
     bugattiChironCost.innerText = "Cost: " + bugattiChironPrice.toFixed(0) + " Rizz"
     if (counter >= bugattiChironPrice.toFixed(0)) {
         counter = counter - bugattiChironPrice.toFixed(0)
         rizz.innerText = "Your Rizz: " + counter.toFixed(0)
         bugattiChironCounter = bugattiChironCounter + 1
         bugattiChiron.innerText = "Amount Owned: " + bugattiChironCounter
-        bugattiChironPrice = 4500 + bugattiChironCounter ** 1.99
+        bugattiChironPrice = 9900 + bugattiChironCounter ** 1.999
         bugattiChironCost.innerText = "Cost: " + bugattiChironPrice.toFixed(0) + " Rizz"
         rizzUpgrade.play()
     }
@@ -291,14 +291,14 @@ function buyBugattiChiron() {
 }
 
 function buyBoeing747() {
-    let boeing747Price = 8000 + boeing747Counter ** 1.99
+    let boeing747Price = 25000 + boeing747Counter ** 1.999
     boeing747Cost.innerText = "Cost: " + boeing747Price.toFixed(0) + " Rizz"
     if (counter >= boeing747Price.toFixed(0)) {
         counter = counter - boeing747Price.toFixed(0)
         rizz.innerText = "Your Rizz: " + counter.toFixed(0)
         boeing747Counter = boeing747Counter + 1
         boeing747.innerText = "Amount Owned: " + boeing747Counter
-        boeing747Price = 8000 + boeing747Counter ** 1.99
+        boeing747Price = 25000 + boeing747Counter ** 1.999
         boeing747Cost.innerText = "Cost: " + boeing747Price.toFixed(0) + " Rizz"
         rizzUpgrade.play()
     }
@@ -309,14 +309,14 @@ function buyBoeing747() {
 }
 
 function buyAirbusA380() {
-    let airbusA380Price = 15000 + airbusA380Counter ** 1.99
+    let airbusA380Price = 50000 + airbusA380Counter ** 1.999
     airbusA380Cost.innerText = "Cost: " + airbusA380Price.toFixed(0) + " Rizz"
     if (counter >= airbusA380Price.toFixed(0)) {
         counter = counter - airbusA380Price.toFixed(0)
         rizz.innerText = "Your Rizz: " + counter.toFixed(0)
         airbusA380Counter = airbusA380Counter + 1
         airbusA380.innerText = "Amount Owned: " + airbusA380Counter
-        airbusA380Price = 15000 + airbusA380Counter ** 1.99
+        airbusA380Price = 50000 + airbusA380Counter ** 1.999
         airbusA380Cost.innerText = "Cost: " + airbusA380Price.toFixed(0) + " Rizz"
         rizzUpgrade.play()
     }
