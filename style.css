@@ -41,7 +41,7 @@
 .Rizz-and-Stats {
     grid-area: Rizz-and-Stats;
     background-color: #86A873;
-    padding: 5px;
+    padding: 20px;
     margin: 2px;
 }
 
@@ -147,6 +147,7 @@
     border-radius: 20px;
 }
 
+/* Include showing text over hover */
 .upgrade-item:hover {
     font-size: 15pt;
     padding: 15px;
@@ -201,15 +202,12 @@ h2 {
     text-align: center;
 }
 
-#moyai {
-    display: flex;
-    width: 75px;
-    padding: 10px;
-    align-items: center;
-}
-
 #rizz-div {
     width: 40px;
+}
+
+#rizz {
+    text-align: center;
 }
 
 /* Palettes: https://coolors.co/095256-087f8c-5aaa95-86a873 */

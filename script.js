@@ -142,7 +142,12 @@ let airbusA380Counter = 0;
 let airbusA380 = document.getElementById('airbusA380Owned')
 let airbusA380Cost = document.getElementById("airbusA380Cost")
 airbusA380.innerText = "Amount Owned: 0";
-// Increase prices, add gym soon
+
+// Easter egg upgrades
+let something1Counter = 0;
+let something1 = document.getElementById('something1Owned')
+let something1Cost = document.getElementById("something1Cost")
+something1.innerText = "Amount Owned: 0";
 //
 
 // Purchasing upgrades
@@ -325,6 +330,24 @@ function buyAirbusA380() {
     }
     updateButtons()
 }
+
+function buySomething1() {
+    let something1Price = 2500000 + something1Counter ** 1.999
+    something1Cost.innerText = "Cost: " + something1Price.toFixed(0) + " Rizz"
+    if (counter >= something1Price.toFixed(0)) {
+        counter = counter - something1Price.toFixed(0)
+        rizz.innerText = "Your Rizz: " + counter.toFixed(0)
+        something1Counter = something1Counter + 1
+        something1.innerText = "Amount Owned: " + something1Counter
+        something1Price = 2500000 + something1Counter ** 1.999
+        something1Cost.innerText = "Cost: " + something1Price.toFixed(0) + " Rizz"
+        rizzUpgrade.play()
+    }
+    else {
+        whatTheSigma.play();
+    }
+    updateButtons()
+}
 // 
 
 // Update and disable buttons based on prices
@@ -339,14 +362,15 @@ function updateButtons() {
     document.getElementById("bugattiChiron").disabled = counter < bugattiChironPrice
     document.getElementById("boeing747").disabled = counter < boeing747Price
     document.getElementById("airbusA380").disabled = counter < airbusA380Price
+    document.getElementById("something1").disabled = counter < something1Price
 }
 // 
 
-// Loop the game and apply the auto rizzers + sigma status
+// Loop the game and apply the auto rizzers + sigma status + easter eggs
 function gameLoop() {
-    counter += (2 * autorizzerCounter) + (5 * watermelonCatCounter) + (10 * enhancedInstagramCounter) + (20 * gymCounter) + (40 * saulGoodmanCounter) + (50 * babyGronkCounter) + (75 * bugattiChironCounter) + (100 * boeing747Counter) + (150 * airbusA380Counter)
+    counter += (2 * autorizzerCounter) + (5 * watermelonCatCounter) + (10 * enhancedInstagramCounter) + (20 * gymCounter) + (40 * saulGoodmanCounter) + (50 * babyGronkCounter) + (75 * bugattiChironCounter) + (100 * boeing747Counter) + (150 * airbusA380Counter) + (400 * something1Counter)
     rizz.innerText = "Your Rizz: " + counter.toFixed(0)
-    autoRizz = (2 * autorizzerCounter) + (5 * watermelonCatCounter) + (10 * enhancedInstagramCounter) + (20 * gymCounter) + (40 * saulGoodmanCounter) + (50 * babyGronkCounter) + (75 * bugattiChironCounter) + (100 * boeing747Counter) + (150 * airbusA380Counter)
+    autoRizz = (2 * autorizzerCounter) + (5 * watermelonCatCounter) + (10 * enhancedInstagramCounter) + (20 * gymCounter) + (40 * saulGoodmanCounter) + (50 * babyGronkCounter) + (75 * bugattiChironCounter) + (100 * boeing747Counter) + (150 * airbusA380Counter) + (400 * something1Counter)
     autoRizzRate.innerText = autoRizz.toFixed(0)
     rizzRate.innerText = (1 + (1.8 * rizzBoostCounter)).toFixed(0)
     if (counter == 696969696969) {
@@ -355,7 +379,8 @@ function gameLoop() {
         alert('Congratulations! You have officially become a sigma! Come collect your prize at the link in your statistcs!')
     }
 }
-// 
+
+//
 // Update the game every 1 second to run the auto rizzers and update buttons
 setInterval(gameLoop, 1000)
 updateButtons()
